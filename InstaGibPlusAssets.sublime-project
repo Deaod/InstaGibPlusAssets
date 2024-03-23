@@ -1,0 +1,16 @@
+{
+	"folders":
+	[
+		{
+			"path": "."
+		}
+	],
+    "build_systems":
+    [
+        {
+            "name": "Build IG+",
+            "file_patterns": ["*.uc"],
+            "cmd": ["$project_path/Build.bat", "silent"]
+        }
+    ]
+}
