@@ -275,11 +275,9 @@ class AssetImport extends Object
 #exec MESH SEQUENCE MESH=IGPlus_FCommando SEQ=Dead3     STARTFRAME=533 NUMFRAMES=16 RATE=10 Group=TakeHit
 #exec MESH SEQUENCE MESH=IGPlus_FCommando SEQ=Dead4     STARTFRAME=549 NUMFRAMES=13 RATE=10 Group=TakeHit
 #exec MESH SEQUENCE MESH=IGPlus_FCommando SEQ=Dead6     STARTFRAME=562 NUMFRAMES=11 RATE=10
-
 #exec MESH SEQUENCE MESH=IGPlus_FCommando SEQ=DeathEnd  STARTFRAME=532 NUMFRAMES=1
 #exec MESH SEQUENCE MESH=IGPlus_FCommando SEQ=DeathEnd2 STARTFRAME=561 NUMFRAMES=1
 #exec MESH SEQUENCE MESH=IGPlus_FCommando SEQ=DeathEnd3 STARTFRAME=572 NUMFRAMES=1
-
 #exec MESH SEQUENCE MESH=IGPlus_FCommando SEQ=Dead1     STARTFRAME=573 NUMFRAMES=23 RATE=12
 #exec MESH SEQUENCE MESH=IGPlus_FCommando SEQ=Dead5     STARTFRAME=596 NUMFRAMES=13 RATE=12 
 #exec MESH SEQUENCE MESH=IGPlus_FCommando SEQ=Dead9     STARTFRAME=609 NUMFRAMES=20 RATE=12
@@ -479,11 +477,9 @@ class AssetImport extends Object
 #exec MESH SEQUENCE MESH=IGPlus_FSoldier SEQ=Dead3     STARTFRAME=533 NUMFRAMES=16 RATE=10    Group=TakeHit
 #exec MESH SEQUENCE MESH=IGPlus_FSoldier SEQ=Dead4     STARTFRAME=549 NUMFRAMES=13 RATE=10    Group=TakeHit
 #exec MESH SEQUENCE MESH=IGPlus_FSoldier SEQ=Dead6     STARTFRAME=562 NUMFRAMES=11 RATE=10
-
 #exec MESH SEQUENCE MESH=IGPlus_FSoldier SEQ=DeathEnd  STARTFRAME=532 NUMFRAMES=1
 #exec MESH SEQUENCE MESH=IGPlus_FSoldier SEQ=DeathEnd2 STARTFRAME=561 NUMFRAMES=1
 #exec MESH SEQUENCE MESH=IGPlus_FSoldier SEQ=DeathEnd3 STARTFRAME=572 NUMFRAMES=1
-
 #exec MESH SEQUENCE MESH=IGPlus_FSoldier SEQ=Dead1     STARTFRAME=573 NUMFRAMES=23 RATE=12
 #exec MESH SEQUENCE MESH=IGPlus_FSoldier SEQ=Dead5     STARTFRAME=596 NUMFRAMES=13 RATE=12    
 #exec MESH SEQUENCE MESH=IGPlus_FSoldier SEQ=Dead9     STARTFRAME=609 NUMFRAMES=20 RATE=12
@@ -806,7 +802,11 @@ class AssetImport extends Object
 #exec Texture Import File=Textures\bootbit.pcx Name=PureBoots Mips=Off
 #exec Texture Import File=Textures\hudbgplain.pcx Name=PureTimeBG Mips=Off
 #exec Texture Import File=Textures\smallwhitething.pcx Name=PureSWT Mips=Off
-#exec Texture Import File=Textures\Arrow.pcx Name=HitMarkerArrow Mips=Off
+#exec Texture Import File=Textures\ArrowTL.pcx Name=HitMarkerArrow Mips=Off
+#exec Texture Import File=Textures\ArrowTL.pcx Name=HitMarkerArrowTL Mips=Off
+#exec Texture Import File=Textures\ArrowTR.pcx Name=HitMarkerArrowTR Mips=Off
+#exec Texture Import File=Textures\ArrowBL.pcx Name=HitMarkerArrowBL Mips=Off
+#exec Texture Import File=Textures\ArrowBR.pcx Name=HitMarkerArrowBR Mips=Off
 #exec Texture Import File=Textures\PureFlag.pcx Name=PureFlag Mips=Off
 #exec Audio Import FILE=Sounds\HitSound.wav Name=HitSound
 #exec Audio Import FILE=Sounds\HitSound1.wav Name=HitSound1
