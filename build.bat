@@ -8,6 +8,7 @@
 ::     Example: C:\UT99\MyPackage\Build\Build.bat BuildDir "C:\UT99\MyPackage\"
 ::   NoInt - Do not automatically generate a .int for the package
 ::   NoUz - Do not automatically generate a .u.uz for the package
+::   NoVerInf - Do not automatically generate the VersionInfo class
 ::   Silent - Suppresses compatibility warnings, automatically resolves them
 ::   NoBind - Prevents binding native functions to C++ implementations, useful when adding new natives
 ::   Verbose - Can be used multiple times. More verbose -> More output from script
@@ -92,6 +93,7 @@ setlocal enabledelayedexpansion enableextensions
 set BUILD_DIR=%~dp0
 set BUILD_NOINT=0
 set BUILD_NOUZ=0
+set BUILD_NOVERINF=0
 set BUILD_SILENT=0
 set BUILD_NOBIND=0
 set BUILD_BYTEHAX=0
@@ -105,6 +107,7 @@ set VERBOSE=0
 
     if /I "%1" EQU "NoInt"    ( set BUILD_NOINT=1 )
     if /I "%1" EQU "NoUz"     ( set BUILD_NOUZ=1 )
+    if /I "%1" EQU "NoVerInf" ( set BUILD_NOVERINF=1 )
 
     if /I "%1" EQU "Silent"   ( set BUILD_SILENT=1 )
     if /I "%1" EQU "NoBind"   ( set BUILD_NOBIND=1 )
@@ -135,7 +138,9 @@ if %VERBOSE% GEQ 1 (
     echo VERBOSE=%VERBOSE%
 )
 
-call "%BUILD_DIR%Build\CreateVersionInfo.bat" %PACKAGE_NAME% dev %PACKAGE_NAME%
+if %BUILD_NOVERINF% == 0 (
+    call "%BUILD_DIR%Build\CreateVersionInfo.bat" %PACKAGE_NAME% dev %PACKAGE_NAME%
+)
 
 pushd "%BUILD_DIR%..\System"
 
