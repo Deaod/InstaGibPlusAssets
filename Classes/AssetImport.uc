@@ -829,3 +829,36 @@ class AssetImport extends Object
 // 1x1 white texture as base for painting crosshairs
 #exec Texture Import File=Textures\CrossHairBase.pcx Name=CrossHairBase Mips=Off
 
+
+// -----------------------------------------------------------------------------
+// HITBOX CYLINDERS
+// -----------------------------------------------------------------------------
+
+// Meshes keep only frame 0, the only frame the hitbox actors draw.
+// No skin is assigned, so actors render with their Texture property.
+
+#exec MESH IMPORT MESH=IGPlus_HeadCylinder ANIVFILE=Models\HeadCylinder_a.3d DATAFILE=Models\HeadCylinder_d.3d X=0 Y=0 Z=0 MLOD=False
+#exec MESH ORIGIN MESH=IGPlus_HeadCylinder X=0 Y=0 Z=0 YAW=-64 PITCH=0 ROLL=0
+#exec MESH SEQUENCE MESH=IGPlus_HeadCylinder SEQ=All STARTFRAME=0 NUMFRAMES=1
+#exec MESHMAP NEW MESHMAP=IGPlus_HeadCylinder MESH=IGPlus_HeadCylinder
+#exec MESHMAP SCALE MESHMAP=IGPlus_HeadCylinder X=0.1 Y=0.1 Z=0.2
+
+#exec MESH IMPORT MESH=IGPlus_BaseCylinder ANIVFILE=Models\BaseCylinder_a.3d DATAFILE=Models\BaseCylinder_d.3d X=0 Y=0 Z=0 MLOD=False
+#exec MESH ORIGIN MESH=IGPlus_BaseCylinder X=0 Y=0 Z=0 YAW=-64 PITCH=0 ROLL=0
+#exec MESH SEQUENCE MESH=IGPlus_BaseCylinder SEQ=All STARTFRAME=0 NUMFRAMES=1
+#exec MESHMAP NEW MESHMAP=IGPlus_BaseCylinder MESH=IGPlus_BaseCylinder
+#exec MESHMAP SCALE MESHMAP=IGPlus_BaseCylinder X=0.1 Y=0.1 Z=0.2
+
+#exec MESH IMPORT MESH=IGPlus_BaseCylinderReduced ANIVFILE=Models\BaseCylinderReduced_a.3d DATAFILE=Models\BaseCylinderReduced_d.3d X=0 Y=0 Z=0 MLOD=False
+#exec MESH ORIGIN MESH=IGPlus_BaseCylinderReduced X=0 Y=0 Z=0 YAW=-64 PITCH=0 ROLL=0
+#exec MESH SEQUENCE MESH=IGPlus_BaseCylinderReduced SEQ=All STARTFRAME=0 NUMFRAMES=1
+#exec MESHMAP NEW MESHMAP=IGPlus_BaseCylinderReduced MESH=IGPlus_BaseCylinderReduced
+#exec MESHMAP SCALE MESHMAP=IGPlus_BaseCylinderReduced X=0.1 Y=0.1 Z=0.2
+
+#exec Texture Import File=Textures\Cylinder\Black.pcx Name=CylinderBlack Mips=Off
+#exec Texture Import File=Textures\Cylinder\Blue.pcx Name=CylinderBlue Mips=Off
+#exec Texture Import File=Textures\Cylinder\Cyan.pcx Name=CylinderCyan Mips=Off
+#exec Texture Import File=Textures\Cylinder\Green.pcx Name=CylinderGreen Mips=Off
+#exec Texture Import File=Textures\Cylinder\Purple.pcx Name=CylinderPurple Mips=Off
+#exec Texture Import File=Textures\Cylinder\Red.pcx Name=CylinderRed Mips=Off
+#exec Texture Import File=Textures\Cylinder\White.pcx Name=CylinderWhite Mips=Off
