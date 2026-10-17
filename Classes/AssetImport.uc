@@ -773,7 +773,7 @@ class AssetImport extends Object
 // NETSTATS
 // -----------------------------------------------------------------------------
 
-#EXEC LOAD FILE="Textures/IGPlusNetStats.utx" PACKAGE=InstaGibPlusAssets_v3.NetStats
+#EXEC LOAD FILE="Textures/IGPlusNetStats.utx" PACKAGE=InstaGibPlusAssets.NetStats
 
 // -----------------------------------------------------------------------------
 // KILL FEED
